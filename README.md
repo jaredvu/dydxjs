@@ -1,19 +1,19 @@
-# marketmap
+# dydxjs
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/545047/188804067-28e67e5e-0214-4449-ab04-2e0c564a6885.svg" width="80"><br />
-    Skip MEV marketmap
+    dydxjs
 </p>
 
 
 ## install
 
 ```sh
-npm install marketmap
+npm install dydxjs
 ```
 ## Table of contents
 
-- [marketmap](#marketmap)
+- [](#dydxjs)
   - [Install](#install)
   - [Table of contents](#table-of-contents)
 - [Usage](#usage)
@@ -35,7 +35,7 @@ npm install marketmap
 ### RPC Clients
 
 ```js
-import { dydx } from 'marketmap';
+import { dydx } from 'dydxjs';
 
 const { createRPCQueryClient } = dydx.ClientFactory; 
 const client = await createRPCQueryClient({ rpcEndpoint: RPC_ENDPOINT });
@@ -51,10 +51,10 @@ const balances = await client.dydx.exchange.v1beta1
 
 ### Composing Messages
 
-Import the `dydx` object from `marketmap`. 
+Import the `dydx` object from `dydxjs`. 
 
 ```js
-import { dydx } from 'marketmap';
+import { dydx } from 'dydxjs';
 
 const {
     createSpotLimitOrder,
@@ -66,7 +66,7 @@ const {
 #### CosmWasm Messages
 
 ```js
-import { cosmwasm } from "marketmap";
+import { cosmwasm } from "dydxjs";
 
 const {
     clearAdmin,
@@ -81,7 +81,7 @@ const {
 #### IBC Messages
 
 ```js
-import { ibc } from 'marketmap';
+import { ibc } from 'dydxjs';
 
 const {
     transfer
@@ -91,7 +91,7 @@ const {
 #### Cosmos Messages
 
 ```js
-import { cosmos } from 'marketmap';
+import { cosmos } from 'dydxjs';
 
 const {
     fundCommunityPool,
@@ -132,7 +132,7 @@ Here are the docs on [creating signers](https://github.com/cosmology-tech/cosmos
 Use `getSigningdydxClient` to get your `SigningStargateClient`, with the proto/amino messages full-loaded. No need to manually add amino types, just require and initialize the client:
 
 ```js
-import { getSigningdydxClient } from 'marketmap';
+import { getSigningdydxClient } from 'dydxjs';
 
 const stargateClient = await getSigningdydxClient({
   rpcEndpoint,
@@ -220,7 +220,7 @@ import {
     ibcAminoConverters,
     dydxAminoConverters,
     dydxProtoRegistry
-} from 'marketmap';
+} from 'dydxjs';
 
 const signer: OfflineSigner = /* create your signer (see above)  */
 const rpcEndpint = 'https://rpc.cosmos.directory/dydx'; // or another URL
@@ -259,7 +259,7 @@ yarn build
 
 ### Codegen
 
-Contract schemas live in `./contracts`, and protos in `./proto`. Look inside of `scripts/codegen.js` and configure the settings for bundling your SDK and contracts into `marketmap`:
+Contract schemas live in `./contracts`, and protos in `./proto`. Look inside of `scripts/codegen.js` and configure the settings for bundling your SDK and contracts into `dydxjs`:
 
 ```
 yarn codegen
