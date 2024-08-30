@@ -1,28 +1,16 @@
 {
-    "compilerOptions": {
-        "baseUrl": ".",
-        "rootDir": "src",
-        "skipLibCheck": true,
-        "emitDeclarationOnly": false,
-        "declaration": true,
-        "esModuleInterop": true,
-        "target": "es2022",
-        "module": "es2022",
-        "lib": [
-            "es2022",
-            "DOM"
-        ],
-        "sourceMap": true,
-        "isolatedModules": true,
-        "allowJs": true,
-        "downlevelIteration": true,
-        "moduleResolution": "node",
-        "resolveJsonModule": true
-    },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node"
+  },
+  "exclude": ["dist", "node_modules"]
 }
