@@ -1,11 +1,11 @@
 {
-  "name": "dydx",
+  "name": "dydxjs",
   "version": "0.0.1",
   "author": "jared vu <jared@dydx.exchange>",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaredvu/dydx"
+    "url": "https://github.com/jaredvu/dydxjs"
   },
   "license": "SEE LICENSE IN LICENSE",
   "publishConfig": {
@@ -17,8 +17,9 @@
   "scripts": {
     "clean": "lerna run clean",
     "build": "lerna run build --stream",
-    "build:dev": "lerna run build:dev --stream; yarn symlink",
     "lint": "lerna run lint --parallel",
+    "test": "lerna run test --stream --scope dydxjs",
+    "codegen": "lerna run codegen --stream --scope dydxjs",
     "symlink": "symlink-workspace --logLevel error",
     "postinstall": "yarn symlink"
   },
@@ -36,8 +37,8 @@
     "lerna": "^6",
     "prettier": "^3.0.2",
     "rimraf": "4.4.1",
-    "strip-ansi": "^6",
-    "symlink-workspace": "^1.9.0",
+    "strip-ansi": "^5",
+    "symlink-workspace": "^1.1.0",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.1.6"

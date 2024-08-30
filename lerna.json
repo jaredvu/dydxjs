@@ -12,7 +12,7 @@
   "registry": "https://registry.npmjs.org",
   "command": {
     "create": {
-      "homepage": "https://github.com/jaredvu/dydx",
+      "homepage": "https://github.com/jaredvu/dydxjs",
       "license": "SEE LICENSE IN LICENSE",
       "access": "restricted"
     },
