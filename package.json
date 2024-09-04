@@ -21,7 +21,9 @@
     "test": "lerna run test --stream --scope dydxjs",
     "codegen": "lerna run codegen --stream --scope dydxjs",
     "symlink": "symlink-workspace --logLevel error",
-    "postinstall": "yarn symlink"
+    "postinstall": "yarn symlink",
+    "client": "yarn workspace ts-client",
+    "dydxjs": "yarn workspace dydxjs"
   },
   "devDependencies": {
     "@types/jest": "^29.5.11",
